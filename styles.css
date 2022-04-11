@@ -1,0 +1,122 @@
+:root {
+  --font-sans: 'Overpass', sans-serif:
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Overpass', sans-serif;
+  color: var(--gray-0);
+}
+
+.component {
+  width: min(100% - 3rem, 25rem);
+  height: 50%;
+  background: var(--gray-8);
+  border-radius: var(--radius-3);
+  display: flex;
+  flex-direction: column;
+  padding: var(--size-fluid-3);
+}
+.icon-star {
+  width: var(--size-7);
+  height: var(--size-7);
+  background-image: url(./images/icon-star.svg);
+  background-color: var(--gray-7);
+  background-position: center;
+  border-radius: var(--radius-round);
+  margin-bottom: var(--size-4);
+}
+
+.component > h1 {
+  font-size:var(--font-size-fluid-2);
+  font-weight: 700;
+  margin-bottom: var(--size-2);
+}
+.component > p {
+  font-size: var(--font-fluid-1);
+  color: var(--gray-6);
+  font-weight: 400;
+  margin-bottom: var(--size-4);
+}
+.rating-stars {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--size-5);
+}
+
+.rating-stars > .rating-button {
+  width: var(--size-fluid-4);
+  height: var(--size-fluid-4);
+  padding: var(--size-5);
+  border-radius: var(--radius-round);
+  background: var(--gray-7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.rating-button.checked {
+  background: var(--orange-6);
+}
+
+.submit-button {
+  width: 100%;
+  padding: var(--size-fluid-1);
+  background: var(--orange-5);
+  border-radius: var(--radius-round);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: var(--font-letterspacing-3);
+}
+
+
+
+.component.modal {
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal img {
+  margin-bottom: var(--size-4);
+  margin-top: var(--size-4);
+}
+.modal .selection-message {
+  padding: var(--size-1) var(--size-2);
+  background: var(--gray-7);
+  border-radius: var(--radius-round);
+  color: var(--orange-6);
+  margin-bottom: var(--size-4);
+  
+}
+
+.modal h2 {
+  font-size:var(--font-size-fluid-2);
+  font-weight: 700;
+  margin-bottom: var(--size-2);
+}
+
+.modal p {
+  font-size: var(--font-fluid-1);
+  color: var(--gray-6);
+  font-weight: 400;
+  margin-bottom: var(--size-4);
+  text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+  .rating-stars > .rating-button:hover{
+  background: var(--gray-6);
+}
+.submit-button:hover {
+  background: var(--gray-0);
+  color: var(--orange-6);
+}
+}
